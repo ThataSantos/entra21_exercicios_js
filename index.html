@@ -17,15 +17,29 @@
         <div class="col">
           <card-body>
             <p style="color: white;"><h1> exercícios aula 08 ver no console</h1></p>
-            <button  onclick="ifs()" class="btn btn-success me-2" > ifs</button>
+            <button id="ifs" onclick="ifs()" class="btn btn-success me-2" > ifs</button>
             <button  onclick="switch_string()" class="btn btn-success me-2" > switch strings</button>
             <button  onclick="switch_number()" class="btn btn-success me-2" > switch numbers</button>
             <button  onclick="percorrer_lista_for()" class="btn btn-success me-2" > Pecorrendo listas com for </button>
             <button  onclick="percorrer_lista_foreach()" class="btn btn-success me-2" > Pecorrendo listas com foreach</button>
+            <button  id="apis" class="btn btn-success me-2" > Consumo de API</button>
           </card-body>
-  
         </div>
-    
+        <main>
+
+            <section class="row">
+                <div class="card bg-black" style="color: white;">
+                    <div class="card-body">
+                        <p id="paragrafo_ler"> No <b>console</b> ok?</p>
+                       
+                        <button id="add1" onclick="addCont()">oi?</button>
+                    </div>
+                </div class="card">
+            </section>
+        </main>
+        <footer>
+            <h6 id="test_01"><i>Byebye</i> hasta la vista </h6>
+        </footer>
      
      
      <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js' integrity='sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa' crossorigin='anonymous'></script>

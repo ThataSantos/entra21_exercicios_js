@@ -89,11 +89,56 @@ function percorrer_lista_for() {
         const element = arrays[contador];
         console.log(contador, arrays[contador]);
     }
-    
+
 }
 
 function percorrer_lista_foreach() {
     arrays.forEach(item => {
-        console.log("Repetindo com forEach sem conta indíce "+ item);
-            });
+        console.log("Repetindo com forEach sem conta indíce " + item);
+    });
 }
+console.group('Manipular html com Javascript Puro');
+let ler = document.getElementById("paragrafo_ler")
+console.log(ler);
+function add1(conteudo){
+    let enter = document.createElement("br");
+    document.body.append(enter);
+    let elemento = document.createElement("div");
+    elemento.textContent = conteudo;
+    document.body.append(elemento);
+}
+
+console.groupEnd();
+
+
+
+$("#apis").on("click ", () => {
+    $.ajax(
+        {
+            url: "https://protected-taiga-89091.herokuapp.com/api/card",
+            type: "get",
+            success: (retorno) => {
+                console.log(retorno.data);
+                cartas = retorno.data
+                listar_cartas(cartas);
+            },
+            error: (errou) => {
+                console.warn("Algo não esta certo ", errou);
+            }
+        }
+    )
+    function listar_cartas(cartas) {
+        cartas.forEach(carta => {
+            console.log(carta);
+        });
+    }
+})
+
+
+
+
+
+
+
+
+
