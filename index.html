@@ -1,49 +1,154 @@
 <!DOCTYPE html>
 <html lang='en'>
- <head>
-     <meta charset='UTF-8'>
-     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-     <title>Document</title>
-     <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx' crossorigin='anonymous'>
- </head>
- <body class="container bg-black">
+
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Document</title>
+  <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css' rel='stylesheet'
+    integrity='sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx' crossorigin='anonymous'>
+</head>
+
+<body class="container " >
+ <header>
     <div class="card bg-black" style="color: white;">
       <h1 style="color: white;">A maior parte está no console</h1>
   
     </div>
     <section class="row">
-      <div class="card bg-black">
+      <div class="card ">
         <div class="col">
           <card-body>
-            <p style="color: white;"><h1> exercícios aula 08 ver no console</h1></p>
-            <button id="ifs" onclick="ifs()" class="btn btn-success me-2" > ifs</button>
-            <button  onclick="switch_string()" class="btn btn-success me-2" > switch strings</button>
-            <button  onclick="switch_number()" class="btn btn-success me-2" > switch numbers</button>
-            <button  onclick="percorrer_lista_for()" class="btn btn-success me-2" > Pecorrendo listas com for </button>
-            <button  onclick="percorrer_lista_foreach()" class="btn btn-success me-2" > Pecorrendo listas com foreach</button>
-            <button  id="apis" class="btn btn-success me-2" > Consumo de API</button>
+            <p >
+            <h1> exercícios aula 08 ver no console</h1>
+            </p>
+            <button id="ifs" onclick="ifs()" class="btn btn-success me-2"> ifs</button>
+            <button onclick="switch_string()" class="btn btn-success me-2"> switch strings</button>
+            <button onclick="switch_number()" class="btn btn-success me-2"> switch numbers</button>
+            <button onclick="percorrer_lista_for()" class="btn btn-success me-2"> Pecorrendo listas com for </button>
+            <button onclick="percorrer_lista_foreach()" class="btn btn-success me-2"> Pecorrendo listas com
+              foreach</button>
+            <button id="apis" class="btn btn-success me-2"> Consumo de API</button>
+            <p id="paragrafo_ler">Esse conteudo está no <b>console</b></p>
+    
+                <h2 id="ta_aqui">estou aqui</h2>
+                <br>
+                <button onclick="addConteudo(prompt( 'O que você quer escrever?'))">oi?</button>
+               
+  
+              </div>
           </card-body>
         </div>
-        <main>
+ </header>
+      <main>
+        <section class="row">
+            <div class="card">
+                <div class="card-body  "  id="card-body" >
+                    <p id="paragrafo_1"> Paragagrafo será lido por jQuery</p>
+                    
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <div id="aqui"></div>
+                    <div id="aqui2"></div>
+                    <div id="aqui3"></div>
+                    <button id="ok"> Clica aqui pra ficar ok!</button>
+                    <button id="add"> Hey</button>
+                    <button id="limpar">Limpar</button>
 
-            <section class="row">
-                <div class="card bg-black" style="color: white;">
+                </div>
+                <section class="row">
+                  <div class="card bg-black" style="color: white; font-weight: bolder;">
                     <div class="card-body">
-                        <p id="paragrafo_ler"> No <b>console</b> ok?</p>
-                       
-                        <button id="add1" onclick="addCont(prompt( 'O que você quer escrever?'))">oi?</button>
+                      <button class="btn btn-dark" onclick="calcular('+')">+</button>
+              
+                      <button class="btn btn-dark" onclick="calcular('-')">-</button>
+              
+                      <button class="btn btn-dark" onclick="calcular('*')">*</button>
+              
+                      <button class="btn btn-dark" onclick="calcular('/')">/</button>
+              
+                      <button class="btn btn-dark" onclick="calcular('Merendar')">Merendar</button>
                     </div>
-                </div class="card">
-            </section>
-        </main>
-        <footer>
-            <h6 id="test_01"><i>Byebye</i> hasta la vista </h6>
-        </footer>
-     
-     
-     <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js' integrity='sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa' crossorigin='anonymous'></script>
-     <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
-     <script src='/aula08.js'></script>
+                  </div>
+                </section>
+            </div class="card">
+        </section>
+        <section class="row">
+          <aside class="col-3">
+              <div class="card">
+                  <div class="card-header">Formulário</div>
+                  <form>
+                      <div class="card-body">
+                          <label for="nome">Nome</label>
+                          <input type="text" id="nome" class="form-control" required />
+  
+                          <div class="row">
+                              <div class="col-4">
+                                  <label for="idade">Idade</label>
+                                  <input type="number" id="idade" class="form-control" />
+                              </div>
+                              <div class="col">
+                                  <label for="cidade">Cidade</label>
+                                  <input type="text" id="cidade" class="form-control" />
+                              </div>
+                          </div>
+                      </div>
+                      <div class="card-footer">
+                          <button type="submit" class="btn btn-outline-success" id="add">
+                              Add
+                          </button>
+                          <button type="submit" class="btn btn-outline-primary" id="update">
+                              Update
+                          </button>
+                          <button type="reset" class="btn btn-outline-danger" id="clean">
+                              Clean
+                          </button>
+                      </div>
+                  </form>
+              </div>
+          </aside>
+          <main class="col">
+              <div class="card">
+                  <div class="card-header">Dados</div>
+                  <div class="card-body">
+                      <table class="table table-bordered table-striped table-hover">
+                          <thead>
+                              <th>Nome</th>
+                              <th>Idade</th>
+                              <th>Cidade</th>
+                              <th></th>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>Nome de exemplo</td>
+                                  <td>Idade de exemplo</td>
+                                  <td>Cidade de exemplo</td>
+                                  <td>
+                                      <button class="btn btn-outline-primary">Edit</button>
+                                      <button class="btn btn-outline-danger">Delete</button>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </main>
+      </section>
+    </main>
+      
+
+
+      <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js'
+        integrity='sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa'
+        crossorigin='anonymous'></script>
+      <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
+      <script src='/aula08.js'></script>
 </body>
+
 </html>
